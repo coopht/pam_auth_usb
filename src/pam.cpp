@@ -1,3 +1,5 @@
+// Copyright (c) <2017> <Alexander Basov>
+
 #define PAM_SM_AUTH
 
 #include <security/pam_modules.h>

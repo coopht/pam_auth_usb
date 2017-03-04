@@ -1,3 +1,4 @@
+# Copyright (c) <2017> <Alexander Basov>
 
 set (PAM_LIB_SRC config.cpp
                  pam.cpp

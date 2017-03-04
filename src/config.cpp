@@ -1,7 +1,8 @@
+// Copyright (c) <2017> <Alexander Basov>
+//
+// Configuration file contains serialized representation of Device class
+//
 
-/*
- * Configuration file contains serialized representation of Device class
- */
 #include "config.h"
 
 #include <iostream>

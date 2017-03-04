@@ -1,3 +1,5 @@
+# Copyright (c) <2017> <Alexander Basov>
+
 cmake_minimum_required(VERSION 3.2)
 project(pam_usb_auth)
 

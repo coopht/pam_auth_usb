@@ -1,3 +1,4 @@
+// Copyright (c) <2017> <Alexander Basov>
 
 #include <cstring>
 #include <cerrno>
