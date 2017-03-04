@@ -1,6 +1,19 @@
-cmake_minimum_required(VERSION 2.6)
-project(pam_auth)
+cmake_minimum_required(VERSION 3.2)
+project(pam_usb_auth)
 
-add_executable(pam_auth main.cpp)
+find_package(PkgConfig)
+pkg_check_modules(LIBUSB REQUIRED libusb-1.0)
 
-install(TARGETS pam_auth RUNTIME DESTINATION bin)
+if (NOT LIBUSB_FOUND)
+    message(FATAL_ERROR "libusb not found")
+endif(NOT LIBUSB_FOUND)
+
+set (CMAKE_CXX_FLAGS "-std=c++0x -Wall -O2")
+
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra -Werror")
+
+endif (CMAKE_BUILD_TYPE STREQUAL "Debug")
+
+add_subdirectory(src)
