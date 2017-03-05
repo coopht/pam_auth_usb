@@ -9,7 +9,7 @@ set (PAM_LIB_HDRS config.h
                   usb_device.h)
 
 add_library(pam_usb_auth SHARED ${PAM_LIB_GDRS} ${PAM_LIB_SRC})
-target_link_libraries(pam_usb_auth ${LIB_USB_LIBRARIES})
+target_link_libraries(pam_usb_auth ${LIBUSB_LIBRARIES})
 
 SET_TARGET_PROPERTIES(pam_usb_auth PROPERTIES PREFIX "")
 
